@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1718520000000,
+    "name": "John Smith",
+    "email": "john@test.com",
+    "company": "Medical Inc",
+    "message": "Need conformal cooling mold",
+    "category": "plastic-mold",
+    "createdAt": "2026-06-16T08:20:00.000Z",
+    "status": "new"
+  }
+]
