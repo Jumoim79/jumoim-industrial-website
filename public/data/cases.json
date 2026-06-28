@@ -1,0 +1,19 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8",
+    "version": "v5",
+    "created_at": "2026-06-20T22:00:00Z",
+    "title": "Industrial Precision Mold Factory - CNC Machining with H13 Steel",
+    "industry": "Automotive Manufacturing",
+    "materials": "H13 Steel (HRC 58-62)",
+    "tolerance": "±0.02mm (required), ±0.015mm (achieved)",
+    "outcome": "Achieved ±0.015mm precision, 30% shorter processing time, 0.5% rework rate, 15% cost reduction per mold.",
+    "status": "Completed",
+    "media": [],
+    "prompt_sdxl": "Ultra-realistic industrial CNC machining, H13 steel mold factory, cinematic lighting, blue steel tone, high precision mechanical detail",
+    "prompt_video": "Cinematic 3D animation of CNC machining process in industrial mold factory, H13 steel processing, dynamic camera movement",
+    "negative_prompt": "low quality, blur, distortion, wrong geometry, poor machining, unrealistic metal surface",
+    "cover_image_style": "industrial technical illustration, metallic texture, high precision machining environment",
+    "publish_target": ["website", "ai_pipeline", "facebook"]
+  }
+]

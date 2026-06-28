@@ -1,0 +1,13 @@
+{
+  "home": {
+    "title": "精密制造解决方案",
+    "subtitle": "模具 · CNC · 金属3D打印"
+  },
+  "rfq": {
+    "title": "询盘系统",
+    "name": "姓名",
+    "email": "邮箱",
+    "message": "项目需求",
+    "submit": "提交询盘"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "home": {
+    "title": "Precision Manufacturing Solutions",
+    "subtitle": "Mold · CNC · Metal 3D Printing"
+  },
+  "rfq": {
+    "title": "Request for Quotation",
+    "name": "Name",
+    "email": "Email",
+    "message": "Project Details",
+    "submit": "Submit RFQ"
+  }
+}

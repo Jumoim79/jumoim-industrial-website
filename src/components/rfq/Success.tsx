@@ -1,15 +1,14 @@
 export default function Success() {
   return (
-    <div className="max-w-xl mx-auto text-center p-10">
-      <h1 className="text-2xl font-bold">RFQ Submitted</h1>
+    <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+      <h3 className="font-semibold text-green-700">
+        Engineering Response Time
+      </h3>
 
-      <p className="mt-4 text-gray-600">
-        Engineering team will review your request shortly.
+      <p className="text-gray-700 mt-2">
+        Our engineering team usually responds
+        within 24 hours.
       </p>
-
-      <a href="/" className="inline-block mt-6 underline">
-        Back to Home
-      </a>
     </div>
   );
 }

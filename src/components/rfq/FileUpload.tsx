@@ -1,14 +1,17 @@
-"use client";
-
 export default function FileUpload() {
   return (
-    <div className="border p-4">
-      <label className="block font-medium">Upload Files (optional)</label>
+    <div>
+      <h2 className="text-xl font-semibold mb-3">
+        Upload Engineering Files
+      </h2>
 
-      <input type="file" multiple className="mt-2" />
+      <input
+        type="file"
+        className="block w-full border p-4 rounded-lg"
+      />
 
       <p className="text-sm text-gray-500 mt-2">
-        STEP / STL / PDF supported
+        STEP / STP / PDF / CAD Files
       </p>
     </div>
   );

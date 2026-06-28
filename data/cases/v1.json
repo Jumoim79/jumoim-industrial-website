@@ -1,0 +1,36 @@
+[
+  {
+    "id": "case_1782004599497",
+    "title": "CNC Injection Mold",
+    "industry": "Automotive Manufacturing",
+    "materials": "H13 Steel",
+    "tolerance": "±0.02mm",
+    "status": "Rendered",
+    "prompt_sdxl": "industrial CNC mold factory",
+    "prompt_video": "3D CNC machining animation, industrial factory automation, cinematic visualization",
+    "negative_prompt": "low quality, blur, deformation, unrealistic geometry",
+    "publish_target": [
+      "website",
+      "ai_pipeline",
+      "facebook"
+    ],
+    "image": "/output/cnc.png",
+    "updated_at": "2026-06-21T01:21:49.551Z"
+  },
+  {
+    "id": "case_001",
+    "title": "Industrial Precision Mold Factory - CNC Machining",
+    "industry": "Automotive Manufacturing",
+    "materials": "H13 Steel",
+    "tolerance": "±0.02mm",
+    "status": "Completed",
+    "prompt_sdxl": "industrial precision mold factory, CNC machining, H13 steel, cinematic lighting, ultra realistic, blue steel tone",
+    "prompt_video": "3D industrial CNC machining process, factory automation, cinematic technical visualization",
+    "negative_prompt": "low quality, blur, deformation, unrealistic geometry",
+    "publish_target": [
+      "website",
+      "facebook",
+      "ai_pipeline"
+    ]
+  }
+]

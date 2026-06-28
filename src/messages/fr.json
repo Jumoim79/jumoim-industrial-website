@@ -1,9 +1,12 @@
 {
-  "home": "Solutions de fabrication de précision",
-  "plastic_mold": "Moule plastique",
-  "metal_mold": "Moule métallique",
-  "cnc": "CNC & Impression 3D métal",
-  "rfq": "Demande RFQ",
-  "about": "À propos",
-  "contact": "Équipe technique"
+  "rfq": {
+    "title": "Système RFQ Industriel",
+    "name": "Nom",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "company": "Entreprise",
+    "project": "Type de projet",
+    "message": "Décrire les besoins",
+    "submit": "Envoyer"
+  }
 }

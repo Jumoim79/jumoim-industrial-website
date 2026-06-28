@@ -3,98 +3,75 @@
 import { useState } from "react";
 
 export default function RFQForm() {
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+const [loading, setLoading] = useState(false);
+const [success, setSuccess] = useState(false);
 
-  async function handleSubmit(
-    e: React.FormEvent<HTMLFormElement>
-  ) {
-    e.preventDefault();
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+e.preventDefault();
 
-    setLoading(true);
 
-    const formData = new FormData(e.currentTarget);
+setLoading(true);
 
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      company: formData.get("company"),
-      message: formData.get("message"),
-    };
+const form = e.currentTarget;
 
-    try {
-      const res = await fetch("/api/rfq/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+const formData = {
+  name: (form.elements.namedItem("name") as HTMLInputElement)?.value || "",
+  email: (form.elements.namedItem("email") as HTMLInputElement)?.value || "",
+  material: (form.elements.namedItem("material") as HTMLInputElement)?.value || "",
+  quantity: (form.elements.namedItem("quantity") as HTMLInputElement)?.value || "",
+  message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || "",
+};
 
-      if (res.ok) {
-        setSuccess(true);
-        e.currentTarget.reset();
-      }
-    } catch (error) {
-      console.error("RFQ submit error:", error);
-    } finally {
-      setLoading(false);
-    }
-  }
+try {
+  await fetch("/api/rfq", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
 
-  if (success) {
-    return (
-      <div className="rounded-xl border p-8 text-center">
-        <h3 className="text-2xl font-bold">
-          RFQ Submitted Successfully
-        </h3>
-        <p className="mt-3 text-gray-500">
-          Our engineering team will contact you shortly.
-        </p>
-      </div>
-    );
-  }
+  setSuccess(true);
+  form.reset();
+} catch (error) {
+  console.error(error);
+}
 
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-5"
-    >
-      <input
-        name="name"
-        placeholder="Your Name"
-        required
-        className="w-full rounded-lg border p-4"
-      />
+setLoading(false);
 
-      <input
-        name="email"
-        type="email"
-        placeholder="Email Address"
-        required
-        className="w-full rounded-lg border p-4"
-      />
 
-      <input
-        name="company"
-        placeholder="Company Name"
-        className="w-full rounded-lg border p-4"
-      />
+}
 
-      <textarea
-        name="message"
-        placeholder="Project Details"
-        rows={6}
-        className="w-full rounded-lg border p-4"
-      />
+return ( <form onSubmit={handleSubmit}> <input name="name" placeholder="Name / Company" required /> <br /> <br />
 
-      <button
-        type="submit"
-        disabled={loading}
-        className="rounded-lg bg-black px-8 py-4 text-white"
-      >
-        {loading ? "Submitting..." : "Submit RFQ"}
-      </button>
-    </form>
-  );
+```
+  <input name="email" type="email" placeholder="Email" required />
+  <br />
+  <br />
+
+  <input name="material" placeholder="Material" />
+  <br />
+  <br />
+
+  <input name="quantity" placeholder="Quantity" />
+  <br />
+  <br />
+
+  <textarea name="message" placeholder="Project Details" />
+  <br />
+  <br />
+
+  <button type="submit" disabled={loading}>
+    {loading ? "Submitting..." : "Submit RFQ"}
+  </button>
+
+  {success && (
+    <p>
+      Your request has been received. Our engineering team will contact you.
+    </p>
+  )}
+</form>
+
+
+);
 }

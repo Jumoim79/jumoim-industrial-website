@@ -1,9 +1,12 @@
 {
-  "home": "Precision Manufacturing Solutions",
-  "plastic_mold": "Plastic Mold",
-  "metal_mold": "Metal Mold",
-  "cnc": "CNC & Metal 3D Printing",
-  "rfq": "Request RFQ",
-  "about": "About JUMOIM",
-  "contact": "Contact Engineering Team"
+  "rfq": {
+    "title": "Industrial RFQ System",
+    "name": "Name",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "company": "Company",
+    "project": "Project Type",
+    "message": "Describe requirements",
+    "submit": "Submit RFQ"
+  }
 }

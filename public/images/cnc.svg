@@ -1,0 +1,14 @@
+
+<svg width="1200" height="675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0a0f1c" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)" />
+  <text x="50%" y="50%" font-size="40" fill="white"
+        text-anchor="middle" font-family="Arial">
+    CNC Precision Machining
+  </text>
+</svg>
