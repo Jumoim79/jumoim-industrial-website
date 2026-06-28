@@ -10,25 +10,23 @@ export default function Gallery() {
     fetch("/api/images")
       .then(r => r.json())
       .then(d => setImages(d.images || []))
+      .catch(() => setImages([]))
   }, [])
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Industrial Gallery</h1>
+      <h1>Gallery</h1>
 
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-        gap: "10px"
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+        gap: 10
       }}>
         {images.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            style={{ width: "100%", borderRadius: 6 }}
-          />
+          <img key={i} src={img} style={{ width: "100%" }} />
         ))}
       </div>
+
     </div>
   )
 }
